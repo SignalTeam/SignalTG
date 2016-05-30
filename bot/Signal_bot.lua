@@ -266,26 +266,23 @@ function create_config( )
     },
     sudo_users = {185264953,175636120},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[MeGa shield v2.9
+    about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
 
 Github:
-https://github.com/hafez16/mega-shield
+https://github.com/p00ria/Signal/tree/supergroups
 
 Admins:
-@hafez1116hafez [Developer]
-@amirho3ien911 [Developer]
-@Eblis_alone [Manager]
-@Mmd_hei [sponsor]
+@ThisIsPouria [Founder & Developer]
+@Redteam_01_01 [Sudo & Manager]
+@Shadowteam_Admin [Sudo]
+@SHO_OKER_ADMIN [Sudo]
 
 Special thanks to
 SEEDTEAM
-Hextor team
-Magic team
-Avira team
 
 Our channels
-@shieldTM [persian]
+@SignalTM [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
