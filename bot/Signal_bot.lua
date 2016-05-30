@@ -265,7 +265,7 @@ function create_config( )
     "Whitelist",
     },
     sudo_users = {185264953,175636120},
-    moderation = {data = 'data/moderation.json'},
+    moderation = {data = data/moderation.json'},
     about_text = [[MeGa shield v2.9
 An advanced administration bot based on TG-CLI written in Lua
 
