@@ -251,7 +251,7 @@ function create_config( )
     "Rmsg",
     "Serverinfo"
     "Set",
-    "Set_Tepy",
+    "Set_Type",
     "Sh",
     "Stats",
     "Supergroup",
