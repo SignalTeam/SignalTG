@@ -264,7 +264,7 @@ function create_config( )
     "Welcome",
     "Whitelist",
     },
-    sudo_users = {185264953,175636120},
+    sudo_users = {185264953,175636120,219339258,198794027},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
