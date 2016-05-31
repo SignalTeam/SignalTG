@@ -287,7 +287,7 @@ Special thanks to
 SEEDTEAM
 
 Our channels
-@SignalTM [persian]
+@SignalTM
 ]],
     help_text_realm = [[
 Realm Commands:
