@@ -275,10 +275,13 @@ An advanced administration bot based on TG-CLI written in Lua
 https://github.com/p00ria/Signal/tree/supergroups
 
 Admins:
-@ThisIsPouria [Founder & Developer]
-@Redteam_01_01 [Sudo & Manager]
-@Shadowteam_Admin [Sudo]
-@SHO_OKER_ADMIN [Sudo]
+🔥 @ThisIsPouria [Founder & Developer] 🔥
+
+🔥 @Redteam_01_01 [Sudo & Manager] 🔥
+
+🔥 @Shadowteam_Admin [Sudo] 🔥
+
+🔥 @SHO_OKER_ADMIN [Sudo] 🔥
 
 Special thanks to
 SEEDTEAM
