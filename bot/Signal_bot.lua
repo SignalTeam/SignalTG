@@ -249,7 +249,6 @@ function create_config( )
     "Remove_Plugin",
     "Rmsg",
     "Serverinfo"
-    "Set",
     "Set_Type",
     "Stats",
     "Supergroup",
