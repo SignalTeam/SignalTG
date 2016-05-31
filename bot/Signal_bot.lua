@@ -263,13 +263,15 @@ function create_config( )
     "Weather",
     "Welcome",
     "Whitelist",
+    "Sticker",
+    "Photo"
     },
     sudo_users = {185264953,175636120,219339258,198794027},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
 
-Github:
+🔰 Github 🔰
 https://github.com/p00ria/Signal/tree/supergroups
 
 Admins:
