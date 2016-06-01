@@ -5,8 +5,8 @@ ocal function run(msg, matches)
     local data = load_data(_config.moderation.data)
     if data[tostring(msg.to.id)] then
         if data[tostring(msg.to.id)]['settings'] then
-            if data[tostring(msg.to.id)]['settings']['antitag'] then
-                lock_tag = data[tostring(msg.to.id)]['settings']['antitag']
+            if data[tostring(msg.to.id)]['settings']['lock_tag'] then
+                lock_tag = data[tostring(msg.to.id)]['settings']['lock_tag']
             end
         end
     end
