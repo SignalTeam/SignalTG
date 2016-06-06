@@ -34,7 +34,7 @@ killall telegram-cli
 tmux new-session -s script "bash steady.sh -t"
 ```
 
-# Auto Leave Confiure :
+# Auto Launch Confiure :
 
 **go to steady.sh and config it !**
 
