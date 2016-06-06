@@ -263,9 +263,15 @@ function create_config( )
     "Whitelist",
     "Sticker",
     "Photo",
-    "Aparat"
+    "Aparat",
+    "InvPouria",
+    "Del_Gban",
+    "Date",
+    "Badwords",
+    "FileManager",
+    "Invite"
     },
-    sudo_users = {185264953,175636120,219339258,198794027},
+    sudo_users = {175636120,185264953,198794027},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
@@ -280,7 +286,7 @@ Admins:
 
 🔥 @Shadowteam_Admin [Sudo] 🔥
 
-🔥 @SHO_OKER_ADMIN [Sudo] 🔥
+🔥 @Im_Best_Sudo [Sudo] 🔥
 
 Special thanks to
 SEEDTEAM
@@ -625,18 +631,18 @@ Returns list of muted users in chat
 !banlist
 Returns SuperGroup ban list
 
-!clean [rules|about|modlist|silentlist|filterlist]
+!clean [rules|about|modlist|silentlist|badwords]
 
 !del
 Deletes a message by reply
 
-!filter [word]
-bot Delete word if member send
+!addword [word]
+bot Delete user if member send
 
-!unfilter [word]
-Delete word in filter list
+!remword [word]
+Delete word in badword list
 
-!filterlist
+!badwords
 get filter list
 
 !clean msg [value]
@@ -656,6 +662,7 @@ Returns group logs
 (use invite link to invite)
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
 *Only owner can use res, setowner, promote, demote, and log commands
+*Only owner can use !invpouria to invite sudo in supergroup!
 ]],
   }
   serialize_to_file(config, './data/config.lua')
