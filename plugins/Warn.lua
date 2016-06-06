@@ -101,8 +101,7 @@ local function unwarn_by_username(extra, success, result) -- /unwarn <@username>
 --endif--
   if value then
   redis:hdel(hash, msg.id, '0')
-  text = 'اخطار های کاربر ('..msg.id
-..') پاک شد\nتعداد اخطار ها : ۰/۴'
+  text = 'اخطار های کاربر ('..msg.id..') پاک شد\nتعداد اخطار ها : ۰/۴'
   else
    text = 'این کاربر اخطاری دریافت نکرده است'
   end
