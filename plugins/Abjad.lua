@@ -104,7 +104,9 @@ return 'عدد ابجد کبیر : '..num
   return {
 patterns = {
     "^[!/#]([Aa]bjad) (.*)$",
-    "^[!/#]([Aa]bjad)$"
+    "^[!/#]([Aa]bjad)$",
+    "^([Aa]bjad) (.*)$",
+    "^([Aa]bjad)$"
   },
 run = run
   }
