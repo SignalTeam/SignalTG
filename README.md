@@ -38,4 +38,4 @@ tmux new-session -s script "bash steady.sh -t"
 
 **go to steady.sh and config it !**
 
-***Then Go To line 9 - 10 and and change bot folder name and reload time!***
+***Then Go To line 9 - 10 and change bot folder name and reload time!***
