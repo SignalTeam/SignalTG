@@ -25,15 +25,14 @@ cd SignalTG
 
 **دقـــــــــــيق مثل همین عمل کنید دقـــــــــــــیق**
 
-
-
+```
 # Auto Launch Bot With :
 
-**killall screen**
-**killall tmux**
-**killall telegram-cli**
-**tmux new-session -s script "bash steady.sh -t"**
-
+killall screen
+killall tmux
+killall telegram-cli
+tmux new-session -s script "bash steady.sh -t"
+```
 
 # Auto Leave Confiure :
 
