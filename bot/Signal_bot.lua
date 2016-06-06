@@ -271,7 +271,7 @@ function create_config( )
     "FileManager",
     "Invite"
     },
-    sudo_users = {175636120,185264953,198794027},
+    sudo_users = {175636120,185264953,198794027,219339258},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
