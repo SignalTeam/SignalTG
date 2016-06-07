@@ -402,10 +402,10 @@ local function run(msg, matches)
 	else
 		access = 0
 	end
-	if matches[1] == '/delrank' and if is_sudo(msg) then
+	if matches[1] == '/infodel' and is_sudo(msg) then
 		azlemagham = io.popen('rm ./info/'..matches[2]..'.txt'):read('*all')
 		return 'از مقام خود عزل شد'
-	elseif matches[1] == '/setrank' and if is_sudo(msg) then
+	elseif matches[1] == '/info' and is_sudo(msg) then
 		local name = string.sub(matches[2], 1, 50)
 		local text = string.sub(matches[3], 1, 10000000000)
 		local file = io.open("./info/"..name..".txt", "w")
@@ -513,13 +513,13 @@ return {
 			"/info (reply): اطلاعات دیگران",
 			},
 		sudo = {
-			"/setrank (id) (txt) : اعطای مقام",
-			"/delrank : حذف مقام",
+			"/info (id) (txt) : اعطای مقام",
+			"/infodel : حذف مقام",
 			},
 		},
 	patterns = {
-		"^[!/#](delrank) (.*)$",
-		"^[!/#](setrank) ([^%s]+) (.*)$",
+		"^[!/#](infodel) (.*)$",
+		"^[!/#](Info) ([^%s]+) (.*)$",
 		"^[!/#]([Ii]nfo) (.*)$",
 		"^[!/#](info)$",
 		"^[!/#](Info)$",
