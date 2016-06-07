@@ -38,7 +38,7 @@ local function instagramUser(msg, query)
 	if user.data.website ~= '' then
 		text = text.."Website: "..user.data.website.."\n"
 	end
-	text = text.."\nSignal Bot"
+	text = text.."\n@SignalTM"
 	local file_path = download_to_file(user.data.profile_picture,"insta.png")     -- disable this line if you want to send profile photo as sticker
 	--local file_path = download_to_file(user.data.profile_picture,"insta.webp")    -- enable this line if you want to send profile photo as sticker
 	local cb_extra = {file_path=file_path}
@@ -72,7 +72,7 @@ local function instagramMedia(msg, query)
 		  text = text.."Name: "..jdat.data.user.full_name.."\n"
 		  text = text.."Like Count: "..jdat.data.likes.count.."\n"
 	end
-	text = text.."\nSignal Bot"
+	text = text.."\n@SignalTM"
 	send_msg(receiver,text,ok_cb,false)
 end
 local function run(msg, matches)
