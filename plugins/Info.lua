@@ -17,7 +17,7 @@ local function callback_reply(extra, success, result)
 		userrank = "Moderator ⭐"
 		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
 	elseif tonumber(result.from.id) == tonumber(our_id) then
-		userrank = "Grandex ⭐⭐⭐⭐⭐⭐"
+		userrank = "Signal ⭐⭐⭐⭐⭐⭐"
 		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
@@ -191,7 +191,7 @@ local function callback_res(extra, success, result)
 		userrank = "Moderator ⭐"
 		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
 	elseif tonumber(result.id) == tonumber(our_id) then
-		userrank = "Grandex ⭐⭐⭐⭐⭐⭐"
+		userrank = "Signal ⭐⭐⭐⭐⭐⭐"
 		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
@@ -291,7 +291,7 @@ local function callback_info(extra, success, result)
 		userrank = "Moderator ⭐"
 		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
 	elseif tonumber(result.id) == tonumber(our_id) then
-		userrank = "Grandex ⭐⭐⭐⭐⭐⭐"
+		userrank = "Signal ⭐⭐⭐⭐⭐⭐"
 		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
@@ -402,10 +402,10 @@ local function run(msg, matches)
 	else
 		access = 0
 	end
-	if matches[1] == '/infodel' and is_sudo(msg) then
+	if matches[1] == '/delrank' and is_sudo(msg) then
 		azlemagham = io.popen('rm ./info/'..matches[2]..'.txt'):read('*all')
 		return 'از مقام خود عزل شد'
-	elseif matches[1] == '/info' and is_sudo(msg) then
+	elseif matches[1] == '/setrank' and is_sudo(msg) then
 		local name = string.sub(matches[2], 1, 50)
 		local text = string.sub(matches[3], 1, 10000000000)
 		local file = io.open("./info/"..name..".txt", "w")
@@ -513,13 +513,13 @@ return {
 			"/info (reply): اطلاعات دیگران",
 			},
 		sudo = {
-			"/info (id) (txt) : اعطای مقام",
-			"/infodel : حذف مقام",
+			"/setrank (id) (txt) : اعطای مقام",
+			"/delrank : حذف مقام",
 			},
 		},
 	patterns = {
-		"^[!/#](infodel) (.*)$",
-		"^[!/#](info) ([^%s]+) (.*)$",
+		"^[!/#](delrank) (.*)$",
+		"^[!/#](setrank) ([^%s]+) (.*)$",
 		"^[!/#]([Ii]nfo) (.*)$",
 		"^[!/#](info)$",
 		"^[!/#](Info)$",
