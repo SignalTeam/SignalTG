@@ -8,7 +8,7 @@ local group_welcome = redis:hget(hash,'welcome')
 if matches[1] == 'delwlc' and not matches[2] and is_owner(msg) then 
     
    redis:hdel(hash,'welcome')
-        return 'متن خوش آمد گویی پاک شد 🗑'
+        return 'متن خوش آمد گویی پاک شد '
 end
 
 local url , res = http.request('http://api.gpmod.ir/time/')
