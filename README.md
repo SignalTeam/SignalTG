@@ -23,7 +23,7 @@ cd SignalTG
 ./launch.sh # Enter a phone number & confirmation code.
 ```
 
-**دقـــــــــــيق مثل همین عمل کنید دقـــــــــــــیق**
+**دقـــــــــــيق مثل همین عمل کنید**
 
 ```
 # Auto Launch Bot With :
