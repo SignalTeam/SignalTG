@@ -13,8 +13,8 @@ local function run(msg, matches)
   end
 
   -- The message must come from a chat group
-  if msg.to.type == 'chat' then
-    local chat = 'channel#id'..msg.to.id
+  if msg.to.type == 'channel' then
+    local channel = 'channel#id'..msg.to.id
     chat_add_user(chat, user, callback, false)
     return "inviting sudo......"
   else 
