@@ -106,7 +106,7 @@ local function callback_reply(extra, success, result)
 	--phone ------------------------------------------------------------------------------------------------
 	if access == 1 then
 		if result.from.phone then
-			number = "0"..string.sub(result.from.phone, 3)
+			number = "+"..string.sub(result.from.phone, 3)
 			if string.sub(result.from.phone, 0,2) == '98' then
 				number = number.."\nکشور: جمهوری اسلامی ایران"
 				if string.sub(result.from.phone, 0,4) == '9891' then
@@ -211,7 +211,7 @@ local function callback_res(extra, success, result)
 	--phone ------------------------------------------------------------------------------------------------
 	if access == 1 then
 		if result.phone then
-			number = "0"..string.sub(result.phone, 3)
+			number = "+"..string.sub(result.phone, 3)
 			if string.sub(result.phone, 0,2) == '98' then
 				number = number.."\nکشور: جمهوری اسلامی ایران"
 				if string.sub(result.phone, 0,4) == '9891' then
@@ -311,7 +311,7 @@ local function callback_info(extra, success, result)
 	--phone ------------------------------------------------------------------------------------------------
 	if access == 1 then
 		if result.phone then
-			number = "0"..string.sub(result.phone, 3)
+			number = "+"..string.sub(result.phone, 3)
 			if string.sub(result.phone, 0,2) == '98' then
 				number = number.."\nکشور: جمهوری اسلامی ایران"
 				if string.sub(result.phone, 0,4) == '9891' then
@@ -396,16 +396,16 @@ end
 
 local function run(msg, matches)
 	local data = load_data(_config.moderation.data)
-	org_chat_id = "chat#id"..msg.to.id
+	org_channel_id = "channel#id"..msg.to.id
 	if is_sudo(msg) then
 		access = 1
 	else
 		access = 0
 	end
-	if matches[1] == '/infodel' and is_sudo(msg) then
+	if matches[1] == 'infodel' and is_sudo(msg) then
 		azlemagham = io.popen('rm ./info/'..matches[2]..'.txt'):read('*all')
 		return 'از مقام خود عزل شد'
-	elseif matches[1] == '/info' and is_sudo(msg) then
+	elseif matches[1] == 'Info' and is_sudo(msg) then
 		local name = string.sub(matches[2], 1, 50)
 		local text = string.sub(matches[3], 1, 10000000000)
 		local file = io.open("./info/"..name..".txt", "w")
@@ -513,16 +513,16 @@ return {
 			"/info (reply): اطلاعات دیگران",
 			},
 		sudo = {
-			"/info (id) (txt) : اعطای مقام",
-			"/infodel : حذف مقام",
+			"Info (id) (txt) : اعطای مقام",
+			"infodel : حذف مقام",
 			},
 		},
 	patterns = {
-		"^[!/#](infodel) (.*)$",
-		"^[!/#](Info) ([^%s]+) (.*)$",
-		"^(info) (.*)$",
-		"^(info)$",
-		"^(Info)$",
+		"^(infodel) (.*)$",
+		"^(Info) ([^%s]+) (.*)$",
+		"^[!/#](info) (.*)$",
+		"^[!/#](info)$",
+		"^[!/#](Info)$",
 	},
 	run = run,
 }
