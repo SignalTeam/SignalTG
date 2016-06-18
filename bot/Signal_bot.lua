@@ -270,9 +270,11 @@ function create_config( )
     "Badwords",
     "FileManager",
     "Invite",
-    "Warn"
+    "Warn",
+    "Caption",
+    "Payamresan"
     },
-    sudo_users = {175636120,185264953,198794027,219339258},
+    sudo_users = {175636120,214795464,198794027,219339258},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
 An advanced administration bot based on TG-CLI written in Lua
@@ -281,11 +283,11 @@ An advanced administration bot based on TG-CLI written in Lua
 https://github.com/SIGNALTEAM/SignalTG.git
 
 Admins:
-🔥 @ThisIsPouria [Founder & Developer] 🔥
+🔥 @Ww_Developer_wW [Founder & Developer] 🔥
 
-🔥 @Redteam_01_01 [Sudo & Manager] 🔥
+🔥 @Mr_Barbod [Sudo & Manager] 🔥
 
-🔥 @It_Is_Crazy [Sudo] 🔥
+🔥 @EMC_Founder [Sudo] 🔥
 
 🔥 @Im_Best_Sudo [Sudo] 🔥
 
@@ -293,7 +295,7 @@ Special thanks to
 SEEDTEAM
 
 Our channels
-@SignalTM
+@Signal_CH
 ]],
     help_text_realm = [[
 Realm Commands:
