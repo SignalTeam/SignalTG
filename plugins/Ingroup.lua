@@ -225,7 +225,7 @@ function show_group_settingsmod(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "⚙Group settings:⚙\n⚡️Lock group name : "..settings.lock_name.."\n⚡️Lock group photo : "..settings.lock_photo.."\n⚡️Lock group member : "..settings.lock_member.."\n⚡️Lock group leave : "..leave_ban.."\n⚡️flood sensitivity : "..NUM_MSG_MAX.."\n⚡️Bot protection : "..bots_protection.."\n⚡️Lock links : "..settings.lock_link.."\n⚡️Lock RTL: "..settings.lock_rtl.."\n⚡️Lock sticker: "..settings.lock_sticker.."\n⚡️Public: "..settings.public.."\n💥Bot Version : 1.0 💥\n💥Signal Bot💥\n@SignalTM"
+  local text = "⚙Group settings:⚙\n⚡️Lock group name : "..settings.lock_name.."\n⚡️Lock group photo : "..settings.lock_photo.."\n⚡️Lock group member : "..settings.lock_member.."\n⚡️Lock group leave : "..leave_ban.."\n⚡️flood sensitivity : "..NUM_MSG_MAX.."\n⚡️Bot protection : "..bots_protection.."\n⚡️Lock links : "..settings.lock_link.."\n⚡️Lock RTL: "..settings.lock_rtl.."\n⚡️Lock sticker: "..settings.lock_sticker.."\n⚡️Public: "..settings.public.."\n💥Bot Version : 1.0 💥\n💥Signal Bot💥\n@Signal_CH"
   return text
 end
 
