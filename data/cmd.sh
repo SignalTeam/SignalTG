@@ -19,18 +19,18 @@ memUsed_m=$(($memTotal_m-$memFree_m-$memBuffer_m-$memCache_m))
 
 memUsedPrc=$((($memUsed_b*100)/$memTotal_b))
 
-echo "1⃣Memory: CRITICAL Total: $memTotal_m MB"
-echo "➖➖➖➖➖➖➖➖➖"
-echo "2⃣Memory Used: $memUsed_m MB - $memUsedPrc% used!"
-echo "➖➖➖➖➖➖➖➖➖"
-echo "3⃣Total : $memTotal_b"
-echo "➖➖➖➖➖➖➖➖➖"
-echo '4⃣CPU Usage : '"$CPUPer"'%'
-echo "➖➖➖➖➖➖➖➖➖"
-echo '5⃣Hdd : '"$hdd"'%'
-echo "➖➖➖➖➖➖➖➖➖"
-echo '6⃣Processes : '"$ProcessCnt"
-echo "➖➖➖➖➖➖➖➖➖"
-echo '7⃣Uptime : '"$uptime"
+echo "1🌐Memory: CRITICAL Total: $memTotal_m MB"
+echo "💎💎💎💎💎💎💎💎💎"
+echo "2🌐Memory Used: $memUsed_m MB - $memUsedPrc% used!"
+echo "💎💎💎💎💎💎💎💎💎"
+echo "3🌐Total : $memTotal_b"
+echo "💎💎💎💎💎💎💎💎💎"
+echo '4🌐CPU Usage : '"$CPUPer"'%'
+echo "💎💎💎💎💎💎💎💎💎"
+echo '5🌐Hdd : '"$hdd"'%'
+echo "💎💎💎💎💎💎💎💎💎"
+echo '6🌐Processes : '"$ProcessCnt"
+echo "💎💎💎💎💎💎💎💎💎"
+echo '7🌐Uptime : '"$uptime"
 echo "👑Signal Bot👑"
-echo "👑 @SignalTM 👑"
+echo "👑 @Signal_CH 👑"
