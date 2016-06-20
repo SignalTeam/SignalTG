@@ -8,7 +8,7 @@ local function run(msg, matches)
   for i = 1, #items do
   text = text..'\n\n'..i..'-'..items[i].title..'\nتعداد بازدید: '..items[i].visit_cnt..'\n   لینک: aparat.com/v/'..items[i].uid
   end
-  text = text..'\n\n@SignalTM'
+  text = text..'\n\n@Signal_CH'
   return text
  end
 end
