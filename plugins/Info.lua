@@ -154,19 +154,23 @@ local function callback_reply(extra, success, result)
 		end
 	end
 	--info ------------------------------------------------------------------------------------------------
-	info = "نام کامل: "..string.gsub(result.from.print_name, "_", " ").."\n"
-	.."نام کوچک: "..(result.from.first_name or "-----").."\n"
-	.."نام خانوادگی: "..(result.from.last_name or "-----").."\n\n"
-	.."شماره موبایل: "..number.."\n"
-	.."یوزرنیم: @"..(result.from.username or "-----").."\n"
-	.."آی دی: "..result.from.id.."\n\n"
-	.."مقام: "..usertype.."\n"
-	.."جایگاه: "..userrank.."\n\n"
-	.."رابط کاربری: "..hardware.."\n"
-	.."تعداد پیامها: "..user_info.msgs.."\n"
-	.."نوع پیام: "..msg_type.."\n\n"
-	.."نام گروه: "..string.gsub(result.to.print_name, "_", " ").."\n"
-	.."آی دی گروه: "..result.to.id
+			local url , res = http.request('http://api.gpmod.ir/time/')
+            if res ~= 200 then return "No connection" end
+            local jdat = json:decode(url)
+			local info = "نام کامل: "..string.gsub(msg.from.print_name, "_", " ").."\n"
+					.."نام کوچک: "..(msg.from.first_name or "-----").."\n"
+					.."نام خانوادگی: "..(msg.from.last_name or "-----").."\n\n"
+					.."شماره موبایل: "..number.."\n"
+					.."یوزرنیم: @"..(msg.from.username or "-----").."\n\n"
+					.."ساعت: "..jdat.FAtime.."\n"
+					.."تاريخ: "..jdat.FAdate.."\n"
+					.."آی دی: "..msg.from.id.."\n\n"
+					.."مقام: "..usertype.."\n"
+					.."جایگاه: "..userrank.."\n\n"
+					.."رابط کاربری: "..hardware.."\n"
+					.."تعداد پیامها: "..user_info.msgs.."\n\n"
+					.."نام گروه: "..string.gsub(msg.to.print_name, "_", " ").."\n"
+					.."آی دی گروه: "..msg.to.id
 	send_large_msg(org_chat_id, info)
 end
 
@@ -388,6 +392,7 @@ local function callback_info(extra, success, result)
 	.."نام خانوادگی: "..(result.last_name or "-----").."\n\n"
 	.."شماره موبایل: "..number.."\n"
 	.."یوزرنیم: @"..(result.username or "-----").."\n"
+	.."ساعت: "..msg.from.time.."\n"
 	.."آی دی: "..result.id.."\n\n"
 	.."مقام: "..usertype.."\n"
 	.."جایگاه: "..userrank.."\n\n"
@@ -463,7 +468,7 @@ local function run(msg, matches)
 			--number ------------------------------------------------------------------------------------------------
 			if msg.from.phone then
 				numberorg = string.sub(msg.from.phone, 3)
-				number = "****0"..string.sub(numberorg, 0,6)
+				number = "****+"..string.sub(numberorg, 0,6)
 				if string.sub(msg.from.phone, 0,2) == '98' then
 					number = number.."\nکشور: جمهوری اسلامی ایران"
 					if string.sub(msg.from.phone, 0,4) == '9891' then
@@ -485,12 +490,17 @@ local function run(msg, matches)
 			else
 				number = "-----"
 			end
-			--info ------------------------------------------------------------------------------------------------
+			--time ------------------------------------------------------------------------------------------------
+			local url , res = http.request('http://api.gpmod.ir/time/')
+            if res ~= 200 then return "No connection" end
+            local jdat = json:decode(url)
 			local info = "نام کامل: "..string.gsub(msg.from.print_name, "_", " ").."\n"
 					.."نام کوچک: "..(msg.from.first_name or "-----").."\n"
 					.."نام خانوادگی: "..(msg.from.last_name or "-----").."\n\n"
 					.."شماره موبایل: "..number.."\n"
-					.."یوزرنیم: @"..(msg.from.username or "-----").."\n"
+					.."یوزرنیم: @"..(msg.from.username or "-----").."\n\n"
+					.."ساعت : "..jdat.FAtime.."\n"
+					.."تاريخ :"..jdat.FAdate.."\n"
 					.."آی دی: "..msg.from.id.."\n\n"
 					.."مقام: "..usertype.."\n"
 					.."جایگاه: "..userrank.."\n\n"
